@@ -1,6 +1,6 @@
 body {
     word-wrap: break-word;
-    font-family: sans-serif;
+    font-family: "Monaco";
     counter-reset: sidenote-number;
 }
 
