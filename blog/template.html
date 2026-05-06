@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>$title$ | matthew ding</title>
+  <link rel="stylesheet" href="/styles/reset.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/blog.css" />
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <script defer src="/blog/katex-init.js"></script>
+</head>
+<body>
+  <nav class="post-nav">
+    <a href="/">← home</a>
+    <span class="nav-sep">/</span>
+    <a href="/blog/">blog</a>
+  </nav>
+  <article>
+    <h1 class="post-title">$title$</h1>
+    $if(date)$<p class="post-date">$date$</p>$endif$
+    <hr>
+    $body$
+  </article>
+</body>
+</html>

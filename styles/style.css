@@ -122,16 +122,18 @@ th, td {
   width: 60%;
 }
 
-/* Ensure the contact info cell takes up more space */
-.header tr:last-child td:nth-child(2) {
+.header tr:nth-child(2) td:nth-child(2) {
   width: 60%;
 }
 
-/* Make the location cells more compact */
-.header tr:last-child th:nth-child(3),
-.header tr:last-child td:nth-child(4) {
+.header tr:nth-child(2) th:nth-child(3),
+.header tr:nth-child(2) td:nth-child(4) {
   width: 1%;
   white-space: nowrap;
+}
+
+.header tr:nth-child(3) td {
+  text-align: left;
 }
 
 /* ASCII Art Styles */
@@ -176,69 +178,49 @@ hr:after {
   height: 0;
 }
 
-.header {
-    margin-bottom: calc(var(--line-height) * 2);
-  }
-  
-  .header h1 {
-    margin: 0;
-  }
-  
-  .name-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header .social-links {
-    white-space: nowrap;
-  }
-  
-  .header .links {
-    margin: 0;
-    gap: 1ch;
-    display: flex;
-  }
-  
-  .header .links a {
-    padding: 0.5ch;
-    font-size: 1.2rem;
-  }
-  
-  /* Icon hover effects */
-  .header .links a .fa-linkedin {
-    transition: color 0.2s ease;
-  }
-  
-  .header .links a .fa-github {
-    transition: color 0.2s ease;
-  }
-  
-  .header .links a:hover {
-    background: var(--background-color-alt);
-  }
-  
-  .header .links a:hover .fa-linkedin {
-    color: #0077b5;
-  }
-  
-  .header .links a:hover .fa-github {
-    color: #6e5494;
-  }
-
-  .header .links a:hover {
-    background: none;  /* Remove the background change on hover */
+.name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Header box */
+.header .social-links {
+  white-space: nowrap;
+}
+
+.header .links {
+  margin: 0;
+  gap: 1ch;
+  display: flex;
+}
+
+.header .links a {
+  padding: 0.5ch;
+  font-size: 1.2rem;
+}
+
+.header .links a svg {
+  fill: currentColor;
+  display: block;
+  transition: fill 0.2s ease;
+}
+
+.header .links a:hover .icon-linkedin {
+  fill: #0077b5;
+}
+
+.header .links a:hover .icon-github {
+  fill: #6e5494;
+}
+
 .label {
-    color: #666;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9em;
-  }
-  
-  .value {
-    color: #333;
-    font-weight: normal;
-  }
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.value {
+  color: #333;
+  font-weight: normal;
+}
