@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Generate blog/index.html from markdown post metadata.
+"""Generate blog/index.html from post metadata.
 
 Run via `make blog` or directly: python3 blog/build.py
-Each post in blog/posts/*.md must have a YAML front matter block:
 
+Both .tex and .md posts use YAML front matter at the top:
     ---
     title: "Post Title"
     date: "YYYY-MM-DD"
@@ -34,17 +34,21 @@ def parse_front_matter(filepath):
 
 posts = []
 for fname in sorted(os.listdir(POSTS_DIR)):
-    if fname.endswith(".md"):
-        meta = parse_front_matter(os.path.join(POSTS_DIR, fname))
+    if fname.endswith(".tex"):
+        slug = fname[:-4]
+    elif fname.endswith(".md"):
         slug = fname[:-3]
-        posts.append(
-            {
-                "slug": slug,
-                "title": meta.get("title", slug),
-                "date": meta.get("date", ""),
-                "description": meta.get("description", ""),
-            }
-        )
+    else:
+        continue
+    meta = parse_front_matter(os.path.join(POSTS_DIR, fname))
+    posts.append(
+        {
+            "slug": slug,
+            "title": meta.get("title", slug),
+            "date": meta.get("date", ""),
+            "description": meta.get("description", ""),
+        }
+    )
 
 posts.sort(key=lambda p: p["date"], reverse=True)
 
