@@ -81,7 +81,7 @@ a:link, a:visited {
 }
 
 .header {
-  margin-bottom: calc(var(--line-height) * 2);
+  margin-bottom: 0;
 }
 
 .header h1 {
