@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#efe7d3"/>
+  <!-- bobble hat (mustard dome + cream pom) -->
+  <circle cx="16" cy="5.6" r="2.6" fill="#f6eedd" stroke="#262219" stroke-width="1.3"/>
+  <path d="M6.5 17 a9.5 9.5 0 0 1 19 0 z" fill="#e7a92b" stroke="#262219" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- face (skin) -->
+  <path d="M7 17 a9 9 0 0 0 18 0 z" fill="#e7c6a0" stroke="#262219" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- round glasses -->
+  <circle cx="11.8" cy="19.6" r="3.1" fill="#f6eedd" stroke="#262219" stroke-width="1.7"/>
+  <circle cx="20.2" cy="19.6" r="3.1" fill="#f6eedd" stroke="#262219" stroke-width="1.7"/>
+  <line x1="14.9" y1="19.6" x2="17.1" y2="19.6" stroke="#262219" stroke-width="1.7"/>
+</svg>

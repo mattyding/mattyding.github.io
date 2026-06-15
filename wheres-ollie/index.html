@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics (GA4) — same property as mattyding.github.io; filter by page path /wheres-ollie/. Only in the built (prod) page; dev.html has no analytics. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ03Z5QX01"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YJ03Z5QX01');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#efe7d3">
+<title>Where's Ollie?</title>
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<style>
+  :root{ --paper:#efe7d3; --ink:#1d1b16; }
+  html,body{margin:0;height:100%;overflow:hidden;background:var(--paper);
+    font-family:ui-rounded,"Trebuchet MS","Segoe UI",system-ui,sans-serif;color:var(--ink);
+    -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;}
+  #game{display:block;width:100vw;height:100vh;touch-action:none;cursor:crosshair;}
+  #loading{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+    font-size:clamp(18px,3vw,28px);letter-spacing:.06em;background:var(--paper);z-index:10;}
+  #loading.hidden{display:none;}
+  .dots::after{display:inline-block;width:1.2em;text-align:left;content:'';animation:d 1.2s steps(4,end) infinite;}
+  @keyframes d{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
+</style>
+</head>
+<body>
+  <div id="loading">drawing a city<span class="dots"></span></div>
+  <canvas id="game"></canvas>
+  <noscript><p style="padding:2rem">This little game needs JavaScript enabled to run.</p></noscript>
+  <script src="./ollie.min.js"></script>
+</body>
+</html>
